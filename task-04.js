@@ -46,9 +46,9 @@ const applyDiscount = (products, discount) => {
   for (let i = 0; i < products.length; i++) {
     
     const discountedProduct = {
-      type: products[i].type, // Aynı type
-      price: products[i].price, // Aynı price
-      color: products[i].color, // Aynı color
+      type: products[i].type, 
+      price: products[i].price, 
+      color: products[i].color, 
       discountPrice: products[i].price - (products[i].price * discount / 100)
     };
 
@@ -59,7 +59,7 @@ const applyDiscount = (products, discount) => {
   return newProducts;
 };
 
-console.log(applyDiscount(products, 10)); // İndirimli yeni ürün listesi
-console.log(products); // Orijinal ürün listesi değişmeden kalır
+console.log(applyDiscount(products, 10)); 
+console.log(products); 
 
 

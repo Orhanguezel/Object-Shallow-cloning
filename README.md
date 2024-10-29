@@ -27,14 +27,14 @@ const hatProduct = {
 };
 
 const addProduct = (cart, product) => {
-  const newCart = [...cart, product]; // Creates a new array and adds the product
+  const newCart = [...cart, product]; 
   return newCart;
 };
 
 const updatedCart = addProduct(cart, hatProduct);
 
 console.log(updatedCart);
-console.log(cart); // Original cart remains unchanged
+console.log(cart); 
 ```
 
 ## Task 2: Removing a Task from a Task List
@@ -64,9 +64,8 @@ const finishTask = (tasks) => {
   newTasks.pop(); // Removes the last task from the new array
   return newTasks;
 };
-
-console.log(finishTask(tasks)); // New tasks array without the last task
-console.log(tasks); // Original tasks array remains unchanged
+console.log(finishTask(tasks));
+console.log(tasks);
 ```
 
 ## Task 3: Adding a Full Name to a Person Object
@@ -83,13 +82,13 @@ const person = {
 };
 
 const addFullName = (person) => {
-  const newPerson = { ...person }; // Creates a shallow copy of person
-  newPerson.fullName = `${person.firstName} ${person.lastName}`; // Adds fullName
+  const newPerson = { ...person }; 
+  newPerson.fullName = `${person.firstName} ${person.lastName}`; 
   return newPerson;
 };
 
-console.log(addFullName(person)); // Shows person object with fullName
-console.log(person); // Original person object remains unchanged
+console.log(addFullName(person)); 
+console.log(person); 
 ```
 
 ## Task 4: Applying Discount to Products
@@ -143,10 +142,10 @@ const products = [
 ];
 
 const applyDiscount = (products, discount) => {
-  const newProducts = []; // New array to store products with discount
+  const newProducts = []; 
 
   for (let i = 0; i < products.length; i++) {
-    // Create a new product object with a discounted price
+    
     const discountedProduct = {
       type: products[i].type,
       price: products[i].price,
@@ -154,12 +153,12 @@ const applyDiscount = (products, discount) => {
       discountPrice: products[i].price - (products[i].price * discount / 100),
     };
 
-    newProducts.push(discountedProduct); // Add to new products array
+    newProducts.push(discountedProduct); 
   }
   
-  return newProducts; // Return array with discounted prices
+  return newProducts; 
 };
 
-console.log(applyDiscount(products, 10)); // Array with discounted products
-console.log(products); // Original products array remains unchanged
+console.log(applyDiscount(products, 10)); 
+console.log(products); 
 ```
